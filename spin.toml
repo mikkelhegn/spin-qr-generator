@@ -1,0 +1,15 @@
+spin_version = "1"
+authors = ["Mikkel Mørk Hegnhøj <mikkel@fermyon.com>"]
+description = "QR Code for Discord"
+name = "qr-discord"
+trigger = { type = "http", base = "/" }
+version = "0.1.0"
+
+[[component]]
+id = "qr-discord"
+source = "target/wasm32-wasi/release/qr_discord.wasm"
+allowed_http_hosts = []
+[component.trigger]
+route = "/..."
+[component.build]
+command = "cargo build --target wasm32-wasi --release"
