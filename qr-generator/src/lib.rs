@@ -8,9 +8,8 @@ use spin_sdk::{
     http_component,
 };
 
-/// A simple Spin HTTP component.
 #[http_component]
-fn handle_qr_discord(req: Request) -> Result<Response> {
+fn genereta_qr_code(req: Request) -> Result<Response> {
     let (status, body) = match req.uri().query() {
         Some(p) => {
             let decoded_query = percent_decode(p.as_bytes()).decode_utf8();

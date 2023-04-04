@@ -1,0 +1,12 @@
+manifest_version = "1"
+id = "qr-generator"
+description = "Generate QR Codes"
+trigger_type = "http"
+tags = ["http", "qr"]
+
+[add_component]
+skip_files = ["spin.toml"]
+[add_component.snippets]
+component = "component.txt"
+
+[parameters]

@@ -240,19 +240,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "qr-discord"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "bytes",
- "http",
- "percent-encoding",
- "qrcode-generator",
- "spin-sdk",
- "wit-bindgen-rust",
-]
-
-[[package]]
 name = "qrcode-generator"
 version = "4.1.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -281,7 +268,7 @@ dependencies = [
 [[package]]
 name = "spin-macro"
 version = "0.1.0"
-source = "git+https://github.com/fermyon/spin?tag=v0.9.0#a99ed5130d46c541d5ae0020a09d0dec51be2b0a"
+source = "git+https://github.com/fermyon/spin?tag=v1.0.0#df99be238267b498451993d47b7e42e17da95c09"
 dependencies = [
  "anyhow",
  "bytes",
@@ -295,9 +282,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "spin-qr-generator"
+version = "0.0.1"
+dependencies = [
+ "anyhow",
+ "bytes",
+ "http",
+ "percent-encoding",
+ "qrcode-generator",
+ "spin-sdk",
+ "wit-bindgen-rust",
+]
+
+[[package]]
 name = "spin-sdk"
-version = "0.9.0"
-source = "git+https://github.com/fermyon/spin?tag=v0.9.0#a99ed5130d46c541d5ae0020a09d0dec51be2b0a"
+version = "1.0.0"
+source = "git+https://github.com/fermyon/spin?tag=v1.0.0#df99be238267b498451993d47b7e42e17da95c09"
 dependencies = [
  "anyhow",
  "bytes",
