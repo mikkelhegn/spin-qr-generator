@@ -1,5 +1,5 @@
 [[component]]
-source = { url = "https://github.com/radu-matei/spin-kv-explorer/releases/download/v0.6.0/spin-kv-explorer.wasm", digest = "sha256:38110bc277a393cdfb1a885a0fd56923d47314b2086399d1e3bbcb6daa1f04ad" }
-id = "qr-generator"
+source = { url = "https://github.com/mikkelhegn/spin-qr-generator/releases/download/v0.0.1/spin_qr_generator.wasm", digest = "sha256:33d922ffe15e07a230af314ba6b7d781ed72b7de895982132ef923b3424f094f" }
+id = "spin-qr-generator"
 [component.trigger]
 route = "/qr/..."
