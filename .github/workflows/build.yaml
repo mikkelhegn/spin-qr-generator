@@ -1,0 +1,24 @@
+name: Build
+    
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-wasi
+      
+      - name: Install Spin
+        uses: fermyon/actions/spin/setup@v1
+  
+      - name: Build application
+        shell: bash
+        run: |
+          spin build 

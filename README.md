@@ -23,9 +23,13 @@ To use this component in your Spin application:
 
 1. add this as a template:
 
-   `spin templates install --git https://github.com/mikkelhegn/spin-qr-code`
+   ```
+   spin templates install --git https://github.com/mikkelhegn/spin-qr-code
+   ```
 
 1. add the component to an existing Spin application:
 
-     `spin add spin-qr-code spin-qr-code --accept-defaults`
+   ```
+   spin add spin-qr-code spin-qr-code --accept-defaults
+   ```
 
