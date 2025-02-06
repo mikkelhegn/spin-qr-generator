@@ -1,15 +1,22 @@
-spin_manifest_version = "1"
+spin_manifest_version = 2
+
+[application]
 authors = ["Mikkel Mørk Hegnhøj <mikkel@fermyon.com>"]
 description = "QR Code generator for Spin"
 name = "spin-qr-generator"
-trigger = { type = "http", base = "/" }
-version = "0.0.1"
+version = "0.0.2"
 
-[[component]]
-id = "spin-qr-generator"
-source = "qr-generator/target/wasm32-wasi/release/spin_qr_generator.wasm"
-[component.trigger]
+[variables]
+qr_url = { default = "" }
+
+[[trigger.http]]
 route = "/..."
-[component.build]
+component = "spin-qr-generator"
+
+[component.spin-qr-generator]
+source = "qr-generator/target/wasm32-wasi/release/spin_qr_generator.wasm"
+[component.spin-qr-generator.variables]
+qr_url = "{{ qr_url }}"
+[component.spin-qr-generator.build]
 command = "cargo build --target wasm32-wasi --release"
 workdir = "qr-generator"
