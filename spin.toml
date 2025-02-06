@@ -14,9 +14,9 @@ route = "/..."
 component = "spin-qr-generator"
 
 [component.spin-qr-generator]
-source = "qr-generator/target/wasm32-wasi/release/spin_qr_generator.wasm"
+source = "qr-generator/target/wasm32-wasip1/release/spin_qr_generator.wasm"
 [component.spin-qr-generator.variables]
 qr_url = "{{ qr_url }}"
 [component.spin-qr-generator.build]
-command = "cargo build --target wasm32-wasi --release"
+command = "cargo build --target wasm32-wasip1 --release"
 workdir = "qr-generator"
