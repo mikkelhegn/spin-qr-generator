@@ -32,7 +32,7 @@ jobs:
 
       - name: generate checksums
         run: |
-          sha256sum qr-generator/target/wasm32-wasi/release/spin_qr_generator.wasm > checksums-${{ env.RELEASE_VERSION }}.txt
+          sha256sum qr-generator/target/wasm32-wasip1/release/spin_qr_generator.wasm > checksums-${{ env.RELEASE_VERSION }}.txt
 
       - name: Create release
         uses: softprops/action-gh-release@v1
@@ -40,5 +40,5 @@ jobs:
           fail_on_unmatched_files: true
           generate_release_notes: true
           files: |
-            qr-generator/target/wasm32-wasi/release/spin_qr_generator.wasm
+            qr-generator/target/wasm32-wasip1/release/spin_qr_generator.wasm
             checksums-${{ env.RELEASE_VERSION }}.txt
