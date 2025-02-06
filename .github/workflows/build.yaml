@@ -13,7 +13,7 @@ jobs:
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
         with:
-          targets: wasm32-wasi
+          targets: wasm32-wasip1
       
       - name: Install Spin
         uses: fermyon/actions/spin/setup@v1
