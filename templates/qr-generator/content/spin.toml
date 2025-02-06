@@ -7,7 +7,7 @@ version = "0.0.1"
 
 [[component]]
 id = "spin-qr-generator"
-source = { url = "https://github.com/mikkelhegn/spin-qr-generator/releases/download/v0.0.1/spin_qr_generator.wasm", digest = "sha256:33d922ffe15e07a230af314ba6b7d781ed72b7de895982132ef923b3424f094f" }
+source = { url = "https://github.com/mikkelhegn/spin-qr-generator/releases/download/v0.0.2/spin_qr_generator.wasm", digest = "sha256:8c9a1de8370caecd33d34d2ec8c0d142619fc4aee5dd85d87b0afcb944b69873" }
 [component.trigger]
 route = "/..."
 [component.build]
